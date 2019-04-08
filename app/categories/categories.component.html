@@ -1,0 +1,38 @@
+
+
+<div class="row">
+
+	<div class="col-md-6">
+	  <h3 class="h3">All Categories</h3>
+
+	  <!-- <span class="text-danger ng-cloak" *ngIf="categories.length === 0">Nothing left to budget for.</span> -->
+
+	  <ol>
+	    <li class="ng-cloak" *ngFor="let category of categories">
+	      <button class="btn-info btn-xs" (click)="swapCategory(category.id)">Add</button>
+	      {{category.name}}
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="col-md-6">
+	  <h3 class="h3">My Categories</h3>
+
+	  <!-- <span class="text-danger" data-ng-if="configured.length === 0">What do you want to start budgeting for?</span> -->
+
+	  <ol>
+	    <li class="ng-cloak" *ngFor="let category of configured">
+	      <button class="btn-warning btn-xs" (click)="restoreCategory(category.id)">Remove</button>
+	      {{category.name}}
+	    </li>
+	  </ol>
+
+	  <!-- 
+	  <div *ngIf="configured.length > 0">
+	  	<a data-ui-sref="history" class="btn-success btn-xs">Save</a>
+	  </div>
+	   -->
+	</div>
+
+</div>
+
